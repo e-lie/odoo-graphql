@@ -1,0 +1,7 @@
+{
+  "presets": ["env"],
+  "plugins": [
+    "babel-plugin-inline-import",
+    ["transform-object-rest-spread", { "useBuiltIns": true }]
+  ]
+}
