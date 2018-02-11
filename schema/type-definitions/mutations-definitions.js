@@ -1,14 +1,15 @@
-import { print } from 'graphql';
-import gql from 'graphql-tag';
-
-// using gql can enable syntax highlighting
-const partnersMutations = gql`
+const rootMutation = `
+    # RootMutation
     type Mutation {
+        # Create a partner
         addPartner(name: String!): Partner
+        
+        # Update a partner
         editPartner(id: String!, name: String): Partner
 
+        # Update a user
         editUser(id: String!, name: String): User
     }
 `;
 
-export default print(partnersMutations);
+export default rootMutation;

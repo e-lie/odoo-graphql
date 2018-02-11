@@ -3,6 +3,7 @@ import { merge } from 'lodash';
 import usersResolvers from './fields-resolvers/users';
 import partnersResolvers from './fields-resolvers/partners';
 // queries resolvers
+import fieldsQueriesResolvers from './queries-resolvers/fields-related-queries';
 import partnersQueriesResolvers from './queries-resolvers/partners-related-queries';
 import usersQueriesResolvers from './queries-resolvers/users-related-queries';
 // mutations resolvers
@@ -14,6 +15,7 @@ export default merge(
   partnersResolvers,
   partnersMutationsResolvers,
   usersMutationsResolvers,
+  fieldsQueriesResolvers,
   partnersQueriesResolvers,
   usersQueriesResolvers,
 );

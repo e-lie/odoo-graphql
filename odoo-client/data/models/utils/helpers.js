@@ -6,8 +6,8 @@ const UPDATE_ACTION = 'write';
 const EXECUTE_KW = 'execute_kw';
 const SEARCH_READ = 'search_read';
 
-const executeKw = argsAsArray => new Promise((resolve, reject) =>
-  getDataClient().methodCall(EXECUTE_KW, [...argsAsArray], (err, value) => {
+export const executeKw = argsAsArray => new Promise((resolve, reject) =>
+  getDataClient().methodCall(EXECUTE_KW, argsAsArray, (err, value) => {
     if (err) {
       reject(err);
     } else {

@@ -1,15 +1,21 @@
-import { print } from 'graphql';
-import gql from 'graphql-tag';
-
-// using gql can enable syntax highlighting
-const partnersQueries = gql`
+const rootQuery = `
+    #RootQuery
     type Query {
+        # Fetch a partner
         partner(id: ID!): Partner
+        
+        # Fetch all partners
         allPartners: [Partner]
 
+        # Fetch a user
         user(id: ID!): User
+        
+        # Fetch all users
         allUsers: [User]
+        
+        # Inspect a model's fields and check which ones seem to be of interest
+        modelFields(model: String!): [Field]
     }
 `;
 
-export default print(partnersQueries);
+export default rootQuery;

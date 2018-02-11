@@ -1,13 +1,15 @@
-import { print } from 'graphql';
-import gql from 'graphql-tag';
-
-// using gql can enable syntax highlighting
-const partnerType = gql`
+const partnerType = `
+    # Anyone who interacts with the company
     type Partner {
-        id: ID
-        name: String,
+        # ID for querying
+        id: ID!
+        
+        # Partner's name
+        name: String!
+        
+        # Associated user
         user: User
     }
 `;
 
-export default print(partnerType);
+export default partnerType;
