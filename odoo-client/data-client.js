@@ -1,10 +1,10 @@
 import xmlrpc from 'xmlrpc';
-import { host } from './authentication';
+import { host } from './authentication-client';
 
 const dataClient = xmlrpc.createSecureClient({
   host,
   port: 443,
-  path: '/xmlrpc/2/object'
+  path: '/xmlrpc/2/object',
 });
 
-export const getDataClient = () => dataClient;
+export default () => dataClient;
