@@ -1,14 +1,17 @@
 import xmlrpc from 'xmlrpc';
 
 export const host = process.env.HOST;
+export const port = process.env.PORT;
 export const db = process.env.DB;
 export const password = process.env.PASSWORD;
 const email = process.env.EMAIL;
 const AUTHENTICATE_ACTION = 'authenticate';
 
-const authClient = xmlrpc.createSecureClient({
+export const createClient = port === 443 ? xmlrpc.createSecureClient : xmlrpc.createClient;
+
+const authClient = createClient({
   host,
-  port: 443,
+  port,
   path: '/xmlrpc/2/common',
 });
 

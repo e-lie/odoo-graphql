@@ -1,9 +1,8 @@
-import xmlrpc from 'xmlrpc';
-import { host } from './authentication-client';
+import { host, port, createClient } from './authentication-client';
 
-const dataClient = xmlrpc.createSecureClient({
+const dataClient = createClient({
   host,
-  port: 443,
+  port,
   path: '/xmlrpc/2/object',
 });
 
