@@ -30,8 +30,10 @@ server.listen(SERVER_PORT, () => {
   // auth with Odoo backend
   authenticate()
   // success
-  // eslint-disable-next-line no-console
-    .then(() => console.log(`GraphQL API and GraphiQL available at : http://localhost:${SERVER_PORT}`))
+    .then(() => {
+      // eslint-disable-next-line no-console
+      console.log(`GraphQL API and GraphiQL available at : http://localhost:${SERVER_PORT}/graphql`);
+    })
     // failure
     // eslint-disable-next-line no-console
     .catch(() => { console.log('Exiting.'); process.exit(1); });
