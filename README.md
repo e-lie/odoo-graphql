@@ -7,7 +7,7 @@ it will be extended in the future.
 `npm install` or `yarn`
 
 ## Configuration
-You need to pass the following environment variables to the package so that is works properly :  
+You need to pass the following environment variables to the package so that it works properly :  
 - The hostname of your Odoo server
 - The port of your Odoo server
 - The name of the database you want to connect to
