@@ -18,15 +18,15 @@ You need to pass the following environment variables to the package so that it w
 You have to enter the following commands in the same terminal you will use to start the package.
 
 #### Windows
-`set HOST=subdomain.domain.com`  
-`set PORT=8069`  
+`set ODOO_HOST=subdomain.domain.com`  
+`set ODOO_PORT=8069`  
 `set DB=currently_used_db`  
 `set EMAIL=mail@domain.com`  
 `set PASSWORD=yourpassword`  
 
 #### Unix
-`export HOST=subdomain.domain.com`  
-`export PORT=8069`
+`export ODOO_HOST=subdomain.domain.com`  
+`export ODOO_PORT=8069`
 `export DB=currently_used_db`  
 `export EMAIL=mail@domain.com`  
 `export PASSWORD=yourpassword`  
@@ -36,8 +36,8 @@ You have to enter the following commands in the same terminal you will use to st
 You need to create a .env file at the root of the project. It should look like :
 
 ```
-HOST=subdomain.domain.com 
-PORT=8069
+ODOO_HOST=subdomain.domain.com 
+ODOO_PORT=8069
 DB=currently_used_db
 EMAIL=mail@domain.com
 PASSWORD=yourpassword

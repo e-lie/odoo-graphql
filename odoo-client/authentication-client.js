@@ -1,10 +1,12 @@
 import xmlrpc from 'xmlrpc';
 
-export const host = process.env.HOST;
-export const port = process.env.PORT;
+export const host = process.env.ODOO_HOST;
+// default port is 8069 (non-secure)
+export const port = parseInt(process.env.ODOO_PORT || '8069', 10);
 export const db = process.env.DB;
 export const password = process.env.PASSWORD;
 const email = process.env.EMAIL;
+
 const AUTHENTICATE_ACTION = 'authenticate';
 
 export const createClient = port === 443 ? xmlrpc.createSecureClient : xmlrpc.createClient;
